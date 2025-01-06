@@ -27,14 +27,12 @@ SELECT * FROM layoffs;
 -- 4. remove any columns and rows that are not necessary
 
 
-
 -- 1. Remove Duplicates
 
-# First let's check for duplicates
+# Check for duplicates
 SELECT *
 FROM layoffs_staging;
     
--- We need to really look at every single row to show the duplicates 
 SELECT *
 FROM (
 	SELECT company, location, industry, total_laid_off,percentage_laid_off,`date`, stage, country, funds_raised,
